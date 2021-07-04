@@ -241,7 +241,7 @@ function Attr() {
         const datas = {
             id
         }
-        const apiurl = 'deletepolyline';
+        const apiurl = 'deleteattr';
         let deletee = await deletepost(datas, apiurl) 
         if(deletee === 1){
             notification.open({
@@ -250,7 +250,11 @@ function Attr() {
                     '',
                 icon: <CheckCircleOutlined style={{ color: '#00b894' }} />,
             });
-            getPolyline()
+            attrTipeSaluran()
+            attrKondisiKonstruksi()
+            attrKondisiSaluran()
+            attrKonstruksi()
+            attrKecamatan()
         }else{
             notification.open({
                 message: 'Gagal Menghapus Data',
