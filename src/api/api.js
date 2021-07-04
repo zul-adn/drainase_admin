@@ -36,6 +36,20 @@ export async function getbykategori(datas, URL) {
     return status;
 }
 
+export async function deletepost(datas, URL) {
+    let status = 0
+    await axios
+    .post(`${endpoint2}/${URL}`,datas)
+    .then(res => {
+        if (res.data.success === true){
+            status = 1
+        }else{
+            status = 2
+        }
+    })
+    return status;
+}
+
 //GET
 export async function getbyid(id, URL){
     let datas = []

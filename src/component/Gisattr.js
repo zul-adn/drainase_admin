@@ -6,7 +6,7 @@ import {
    DeleteOutlined
 } from '@ant-design/icons';
 import 'antd/dist/antd.css';
-import { createupdate, getall, remove, getbyid, getbykategori } from '../api/api';
+import { createupdate, getall, remove, getbyid, getbykategori, deletepost } from '../api/api';
 import styled from 'styled-components';
 
 
@@ -236,25 +236,32 @@ function Attr() {
         }
     }
 
-    // // const removeattr = async (id) => {
-    // //     const url = 'deleteattr'
-    // //     const hapus = await remove(id, url)
-    // //     console.log(hapus)
-    // //     if (hapus === 1) {
-    // //         notification.open({
-    // //             message: 'Data Berhasil dihapus',
-    // //             description:
-    // //                 '',
-    // //             icon: <CheckCircleOutlined style={{ color: '#00b894' }} />,
-    // //         });
-    // //         attrBank()
-    // //         attrEselon()
-    // //         attrJabatan()
-    // //         attrPangkat()
-    // //         attrTahun()
-    // //         attrSatuan()
-    // //     }
-    // // }
+    const removeattr = async(id) => {
+        console.log(id)
+        const datas = {
+            id
+        }
+        const apiurl = 'deletepolyline';
+        let deletee = await deletepost(datas, apiurl) 
+        if(deletee === 1){
+            notification.open({
+                message: 'Data Berhasil dihapus',
+                description:
+                    '',
+                icon: <CheckCircleOutlined style={{ color: '#00b894' }} />,
+            });
+            getPolyline()
+        }else{
+            notification.open({
+                message: 'Gagal Menghapus Data',
+                description:
+                    '',
+                icon: <CloseCircleOutlined style={{ color: '#e84118' }} />,
+            });
+        }
+
+    }
+
 
     const columns = [
         {
@@ -274,7 +281,7 @@ function Attr() {
                 <span>
                     <Popconfirm
                         title="Anda yakin menghapus Data ini?"
-                        // onConfirm={() => removeattr(record.id)}
+                        onConfirm={() => removeattr(record.id)}
                         // onCancel={cancel}
                         okText="Yes"
                         cancelText="No"

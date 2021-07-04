@@ -6,7 +6,7 @@ import {
     InfoCircleOutlined,
     CloseCircleOutlined
 } from '@ant-design/icons';
-import { createupdate, getall, remove, getbyid, getbykategori } from '../api/api';
+import { createupdate, getall, remove, getbyid, getbykategori, deletepost } from '../api/api';
 import { Typography } from 'antd';
 import { Link, browserHistory } from 'react-router';
 import { isLogin } from '../reducer/LocalStoradge'
@@ -239,6 +239,32 @@ export default function Polyline() {
         }
     }
 
+    const removepolyline = async(id) => {
+        console.log(id)
+        const datas = {
+            id
+        }
+        const apiurl = 'deletepolyline';
+        let deletee = await deletepost(datas, apiurl) 
+        if(deletee === 1){
+            notification.open({
+                message: 'Data Berhasil dihapus',
+                description:
+                    '',
+                icon: <CheckCircleOutlined style={{ color: '#00b894' }} />,
+            });
+            getPolyline()
+        }else{
+            notification.open({
+                message: 'Gagal Menghapus Data',
+                description:
+                    '',
+                icon: <CloseCircleOutlined style={{ color: '#e84118' }} />,
+            });
+        }
+
+    }
+
     const resetForm = () => {
        setName('')
        setPanjang('')
@@ -305,20 +331,20 @@ export default function Polyline() {
         {
             title: 'Action',
             key: 'action',
-            // render: (text, record) => (
-            //     <span>
-            //         <Button key="edit" onClick={() => getPegawaiById(record.id)} style={{ marginLeft: 10 }} type="primary" icon={<InfoCircleOutlined />} >Edit</Button>
-            //         <Popconfirm
-            //             title="Anda yakin menghapus Data ini?"
-            //             onConfirm={() => removepagawai(record.id)}
-            //             // onCancel={cancel}
-            //             okText="Yes"
-            //             cancelText="No"
-            //         >
-            //             <Button key="hapus" style={{ marginLeft: 10 }} type="danger" icon={<DeleteOutlined />} >Hapus</Button>
-            //         </Popconfirm>
-            //     </span>
-            // ),
+            render: (text, record) => (
+                <span>
+                    {/* <Button key="edit" onClick={() => getPegawaiById(record.id)} style={{ marginLeft: 10 }} type="primary" icon={<InfoCircleOutlined />} >Edit</Button> */}
+                    <Popconfirm
+                        title="Anda yakin menghapus Data ini?"
+                        onConfirm={() => removepolyline(record.id)}
+                        // onCancel={cancel}
+                        okText="Yes"
+                        cancelText="No"
+                    >
+                        <Button key="hapus" style={{ marginLeft: 10 }} type="danger" icon={<DeleteOutlined />} >Hapus</Button>
+                    </Popconfirm>
+                </span>
+            ),
         },
     ];
 
