@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/drainase-admin/static/css/main.38258a38.chunk.css",
-    "main.js": "/drainase-admin/static/js/main.32714525.chunk.js",
-    "main.js.map": "/drainase-admin/static/js/main.32714525.chunk.js.map",
+    "main.js": "/drainase-admin/static/js/main.17688ca0.chunk.js",
+    "main.js.map": "/drainase-admin/static/js/main.17688ca0.chunk.js.map",
     "runtime-main.js": "/drainase-admin/static/js/runtime-main.afa6b150.js",
     "runtime-main.js.map": "/drainase-admin/static/js/runtime-main.afa6b150.js.map",
     "static/css/2.6a59e3ea.chunk.css": "/drainase-admin/static/css/2.6a59e3ea.chunk.css",
     "static/js/2.a08f25ff.chunk.js": "/drainase-admin/static/js/2.a08f25ff.chunk.js",
     "static/js/2.a08f25ff.chunk.js.map": "/drainase-admin/static/js/2.a08f25ff.chunk.js.map",
     "index.html": "/drainase-admin/index.html",
-    "precache-manifest.873120f7158301337ef95cf81e016f59.js": "/drainase-admin/precache-manifest.873120f7158301337ef95cf81e016f59.js",
+    "precache-manifest.ff3d1fee5d02d327f37bfbe5594b1947.js": "/drainase-admin/precache-manifest.ff3d1fee5d02d327f37bfbe5594b1947.js",
     "service-worker.js": "/drainase-admin/service-worker.js",
     "static/css/2.6a59e3ea.chunk.css.map": "/drainase-admin/static/css/2.6a59e3ea.chunk.css.map",
     "static/css/main.38258a38.chunk.css.map": "/drainase-admin/static/css/main.38258a38.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.6a59e3ea.chunk.css",
     "static/js/2.a08f25ff.chunk.js",
     "static/css/main.38258a38.chunk.css",
-    "static/js/main.32714525.chunk.js"
+    "static/js/main.17688ca0.chunk.js"
   ]
 }

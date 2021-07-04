@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/drainase-admin/precache-manifest.873120f7158301337ef95cf81e016f59.js"
+  "/drainase-admin/precache-manifest.ff3d1fee5d02d327f37bfbe5594b1947.js"
 );
 
 self.addEventListener('message', (event) => {
