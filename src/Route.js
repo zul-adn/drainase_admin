@@ -10,7 +10,7 @@ import GisAttr from './component/Gisattr';
 function Routemain(){
     return(
         <Router history={browserHistory} >
-            <Route path={`${process.env.PUBLIC_URL}/drainase-admin`} component={Login} />
+            <Route path={`${process.env.PUBLIC_URL}/drainase-admin/`} component={Login} />
             <Route component={Master}>
                 <Route path={`${process.env.PUBLIC_URL}/drainase-admin/dashboard`} component={Dashboard} />
                 <Route path={`${process.env.PUBLIC_URL}/drainase-admin/administrator`} component={Administrator} />
