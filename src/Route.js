@@ -10,12 +10,12 @@ import GisAttr from './component/Gisattr';
 function Routemain(){
     return(
         <Router history={browserHistory} >
-            <Route path={`${process.env.PUBLIC_URL}/drainase-admin/`} component={Login} />
+            <Route path={`${process.env.PUBLIC_URL}/`} component={Login} />
             <Route component={Master}>
-                <Route path={`${process.env.PUBLIC_URL}/drainase-admin/dashboard`} component={Dashboard} />
-                <Route path={`${process.env.PUBLIC_URL}/drainase-admin/administrator`} component={Administrator} />
-                <Route path={`${process.env.PUBLIC_URL}/drainase-admin/polyline`} component={Polyline} />
-                <Route path={`${process.env.PUBLIC_URL}/drainase-admin/gisattr`} component={GisAttr} />
+                <Route path={`${process.env.PUBLIC_URL}/dashboard`} component={Dashboard} />
+                <Route path={`${process.env.PUBLIC_URL}/administrator`} component={Administrator} />
+                <Route path={`${process.env.PUBLIC_URL}/polyline`} component={Polyline} />
+                <Route path={`${process.env.PUBLIC_URL}/gisattr`} component={GisAttr} />
             </Route>
         </Router>
     );
