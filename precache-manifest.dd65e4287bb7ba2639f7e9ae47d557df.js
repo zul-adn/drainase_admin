@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e06350cd457515da87fff95ee40c930",
+    "revision": "78ba371a6d7d158a4b8270bedeadfa9f",
     "url": "/drainase-admin/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drainase-admin/static/css/2.6a59e3ea.chunk.css"
   },
   {
-    "revision": "0e2e9f5fc6d0221b6ff1",
+    "revision": "93300ac8afa244456d57",
     "url": "/drainase-admin/static/css/main.38258a38.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/drainase-admin/static/js/2.a08f25ff.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e2e9f5fc6d0221b6ff1",
-    "url": "/drainase-admin/static/js/main.17688ca0.chunk.js"
+    "revision": "93300ac8afa244456d57",
+    "url": "/drainase-admin/static/js/main.012f6375.chunk.js"
   },
   {
     "revision": "a549b42d21f24110e7e8",
